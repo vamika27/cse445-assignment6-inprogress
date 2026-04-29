@@ -1,4 +1,4 @@
-﻿using Assignment6.Models;
+using Assignment6.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

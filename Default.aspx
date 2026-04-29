@@ -200,52 +200,45 @@
 
             <asp:TableRow>
                 <asp:TableCell>Brandon</asp:TableCell>
-                <asp:TableCell></asp:TableCell>
-                <asp:TableCell></asp:TableCell>
-                <asp:TableCell>Input:  / Output:</asp:TableCell>
-                <asp:TableCell>TryItServices.aspx</asp:TableCell>
+                <asp:TableCell>Dynamic-link Libary (DLL)</asp:TableCell>
+                <asp:TableCell>CryptoUtil — implements SHA-256 hashing on passwords before storing them in Staff.xml or Member.xml.</asp:TableCell>
+                <asp:TableCell>Input: Password (string) <br /> Output: SHA-256 hash (string) </asp:TableCell>
+                <asp:TableCell>StaffPage.aspx: Account Creation LoginPage.aspx: Login TryItServices.aspx: Hash Test
+                </asp:TableCell>
                 <asp:TableCell><a href="TryItServices.aspx">TryIt →</a></asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow>
                 <asp:TableCell>Brandon</asp:TableCell>
-                <asp:TableCell></asp:TableCell>
-                <asp:TableCell></asp:TableCell>
-                <asp:TableCell>Input:  / Output:</asp:TableCell>
-                <asp:TableCell>TryItServices.aspx</asp:TableCell>
-                <asp:TableCell><a href="TryItServices.aspx">TryIt →</a></asp:TableCell>
+                <asp:TableCell>ASPX Web Service</asp:TableCell>
+                <asp:TableCell>Account Management via XML — Create member and staff accounts, hash passwords, prevents duplicate usernames by appending numbers, and remove accounts.</asp:TableCell>
+                <asp:TableCell>Input: Name, Password, Role (strings) <br /> Output: Staff.xml and Member.xml in App_Data</asp:TableCell>
+                <asp:TableCell>StaffPage.aspx</asp:TableCell>
+                <asp:TableCell><a href="StaffPage.aspx">TryIt →</a></asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow>
                 <asp:TableCell>Brandon</asp:TableCell>
-                <asp:TableCell></asp:TableCell>
-                <asp:TableCell></asp:TableCell>
-                <asp:TableCell>Input:  / Output:</asp:TableCell>
-                <asp:TableCell>TryItServices.aspx</asp:TableCell>
-                <asp:TableCell><a href="TryItServices.aspx">TryIt →</a></asp:TableCell>
+                <asp:TableCell>ASPX Web Service / XML</asp:TableCell>
+                <asp:TableCell>Event Scheduling via XML  — Add and remove competitions, practices, and fundraisers.
+                </asp:TableCell>
+                <asp:TableCell>Input: Date, Time, Location, and Purpose applicable <br /> Output: Competitions.xml, Practices.xml, and Fundraisers.xml in App_Data</asp:TableCell>
+                <asp:TableCell>StaffPage.aspx: <br /> Default.aspx: Display Fundraiser</asp:TableCell>
+                <asp:TableCell><a href="StaffPage.aspx">TryIt →</a></asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow>
                 <asp:TableCell>Brandon</asp:TableCell>
-                <asp:TableCell></asp:TableCell>
-                <asp:TableCell></asp:TableCell>
-                <asp:TableCell>Input:  / Output:</asp:TableCell>
-                <asp:TableCell>TryItServices.aspx</asp:TableCell>
-                <asp:TableCell><a href="TryItServices.aspx">TryIt →</a></asp:TableCell>
+                <asp:TableCell>ASPX Web Service / XML</asp:TableCell>
+                <asp:TableCell>Money Management via XML  —  Add money, mark expenditure, calculate total funds, display fundraisers, and accept or deny pledges.</asp:TableCell>
+                <asp:TableCell>Input: fundraiser selection, amount, pledge selection <br /> Output: Fundraisers.xml and Pledges.xml updated; total funds displayed</asp:TableCell>
+                <asp:TableCell>StaffPage.aspx: Handles funds, accept/deny Default.aspx: Displays Pledges  <br /> MemberPage: Sends Pledges to Staff</asp:TableCell>
+                <asp:TableCell><a href="StaffPage.aspx">TryIt →</a></asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow>
                 <asp:TableCell>Xandra</asp:TableCell>
-                <asp:TableCell>User Control (.ascx)</asp:TableCell>
-                <asp:TableCell>Captcha - generates a random string of digits, that a user must correctly input to verify </asp:TableCell>
-                <asp:TableCell>Input: captchaCode (string) / Output: valid (boolean)</asp:TableCell>
-                <asp:TableCell>Captcha.aspx</asp:TableCell>
-                <asp:TableCell><a href="TryItServices.aspx">TryIt →</a></asp:TableCell>
-            </asp:TableRow>
-
-            <asp:TableRow>
-                <asp:TableCell>Xandra</asp:TableCell>
-                <asp:TableCell>WSDL Service</asp:TableCell>
+                <asp:TableCell>WSDL Service / XML</asp:TableCell>
                 <asp:TableCell>ConvertCompetitionTime: converts the time a user got from one type of pool to a different size. </asp:TableCell>
                 <asp:TableCell>Input: Time (string), fromUnit (string), toUnit (string) / Output: Time (string) </asp:TableCell>
                 <asp:TableCell>TryItServices.aspx</asp:TableCell>

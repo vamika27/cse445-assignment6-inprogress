@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CryptoUtil;
 
 namespace Assignment6
 {
@@ -136,6 +137,20 @@ namespace Assignment6
             FundraisingService service = new FundraisingService();
             string result = service.GetFundraisingStatus(goal, raised);
             ShowFundResult("✅ " + result, true);
+        }
+
+
+        protected void btnHashMe_Click(object sender, EventArgs e)
+        {
+            string hash = txtHashMe.Text.Trim();
+            if (string.IsNullOrEmpty(hash))
+            {
+                lblHashed.Text = "Enter a string to hash.";
+                pnlHashed.Visible = true;
+                return;
+            }         
+            lblHashed.Text = CryptoUtil.hashMe(hash);
+            pnlHashed.Visible = true;
         }
 
         // ===================== HELPERS =====================

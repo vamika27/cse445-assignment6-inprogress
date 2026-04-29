@@ -117,6 +117,24 @@
             </asp:Panel>
         </div>
 
+        <!-- ===================== HASHING SERVICE ===================== -->
+        <div class="service-section">
+            <h2>🔐 CryptoUtil Hashing Service</h2>
+            <p>Hashes an input (passwords) upon creation of a member/staff account.</p>
+
+            <div class="form-group">
+                <label>Hashed Password:</label>
+                <asp:TextBox ID="txtHashMe" runat="server" Width="220px" placeholder="e.g. test" />
+            </div>
+
+            <asp:Button ID="btnHashMe" runat="server" Text="Hash Password" 
+                        CssClass="btn" OnClick="btnHashMe_Click" />
+
+            <asp:Panel ID="pnlHashed" runat="server" CssClass="result-box" Visible="false">
+                <asp:Label ID="lblHashed" runat="server" />
+            </asp:Panel>
+        </div>
+
         <a href="Default.aspx" class="back-link">← Back to Home</a>
 
     </form>
