@@ -202,8 +202,8 @@
         <div>
             <label>Requesting Event</label> <br />
             <asp:DropDownList ID="ddListEventsReq" runat="server"> </asp:DropDownList>
-            <asp:Button ID="btnAcceptEvent" runat="server" CssClass="btn" Text="Accept" />
-            <asp:Button ID="btnDenyEvent" runat="server" CssClass="btn" Text="Deny" />
+            <asp:Button ID="btnAcceptEvent" runat="server" CssClass="btn" Text="Accept" OnClick="btnAcceptEvent_Click" />
+            <asp:Button ID="btnDenyEvent" runat="server" CssClass="btn" Text="Deny" OnClick="btnDenyEvent_Click" />
         </div>
         <div>
             <label>Assign Event</label> <br />
@@ -235,11 +235,11 @@
         <hr />
         <div>
             Name:
-            <asp:TextBox ID="txtName" runat="server" /><br />
+            <asp:TextBox ID="txtName" runat="server" TextMode="Password" /><br />
             Password:
             <asp:TextBox ID="txtPassword" runat="server" /><br />
             <asp:Button ID="btnCreateDefaultAccount" runat="server" CssClass="btn" OnClick="btnCreateDefaultAccount_Click" Text="Create Default Account" />
-            <asp:Button ID="btnCreateStaffAccount" runat="server" CssClass="btn" Text="Create Staff Account" />
+            <asp:Button ID="btnCreateStaffAccount" runat="server" CssClass="btn" OnClick="btnCreateStaffAccount_Click" Text="Create Staff Account" />
         </div>
         <div>
             Name:
@@ -256,12 +256,12 @@
         <div>
             <label>Pledging Donation</label><br />
             <asp:DropDownList ID="ddListPledges" runat="server"> </asp:DropDownList>
-            <asp:Button ID="btnAcceptPledge" runat="server" CssClass="btn" Text="Accept" />
-            <asp:Button ID="btDenyPledge" runat="server" CssClass="btn" Text="Deny" />
+            <asp:Button ID="btnAcceptPledge" runat="server" CssClass="btn" Text="Accept" OnClick="btnAcceptPledge_Click" />
+            <asp:Button ID="btnDenyPledge" runat="server" CssClass="btn" Text="Deny" OnClick="btnDenyPledge_Click" />
         </div>
         <div>
             <asp:DropDownList ID="ddListFundraisers" runat="server"> </asp:DropDownList>
-            <asp:Button ID="btnRemoveFundraiser" runat="server" Text="Fundraiser is Over" CssClass="btn" />
+            <asp:Button ID="btnRemoveFundraiser" runat="server" OnClick="btnRemoveFundraiser_Click" Text="Fundraiser is Over" CssClass="btn" />
         </div> 
 
         <hr />
