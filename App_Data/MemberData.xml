@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SwimmerData>
+	<Swimmer>
+		<Name>Xandra</Name>
+		<Events>
+			<Event>
+				<EventName>100M Backstroke</EventName>
+				<PersonalTime date="04:27:2026">1:48.43</PersonalTime>
+				<PersonalTime date="04:28:2026">1:55.54</PersonalTime>
+				<PersonalTime date="03:14:2026">2:33.97</PersonalTime>
+			</Event>
+			<Event>
+				<EventName>200M Freestyle</EventName>
+				<PersonalTime date="04:28:2026">2:07.13</PersonalTime>
+				<PersonalTime date="04:29:2026">2:03.14</PersonalTime>
+			</Event>
+			<TeamEvent>
+				<EventName>4 by 50 Medley Relay</EventName>
+				<Role>50 M Backstroke</Role>
+				<PersonalTime date="04:27:2026">0:36.56</PersonalTime>
+				<TeamTime date="04:27:2026">2:09.31</TeamTime>
+			</TeamEvent>
+		</Events>
+	</Swimmer>
+</SwimmerData>
