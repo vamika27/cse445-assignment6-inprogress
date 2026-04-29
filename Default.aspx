@@ -119,7 +119,7 @@
         <div>
             <asp:TextBox ID="txtFundAmount" runat="server"/>
             <asp:DropDownList ID="ddListFundraisers" runat="server"> </asp:DropDownList>
-            <asp:Button ID="btnPledgeFund" runat="server" Text="Pledge Money" CssClass="btn"  />
+            <asp:Button ID="btnPledgeFund" runat="server" Text="Pledge Money" CssClass="btn" OnClick="btnPledgeFund_Click" />
         </div> 
 
         <hr />

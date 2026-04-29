@@ -19,9 +19,10 @@
                border: none; cursor: pointer; border-radius: 4px;
                width: 100%; font-size: 16px; margin-top: 10px; }
         .btn:hover { background-color: #005599; }
-        .error-msg { color: red; text-align: center; margin-top: 10px; 
-                     font-weight: bold; }
-        .debug-msg { color: blue; text-align: center; margin-top: 10px; }
+        .error-msg { color: red; text-align: center; margin-top: 10px;
+                     font-weight: bold; display: block; }
+        .debug-msg { color: blue; text-align: center; margin-top: 5px;
+                     font-size: 0.85em; display: block; }
         .signup-link { text-align: center; margin-top: 15px; }
         .signup-link a { color: #005599; }
         .back-link { text-align: center; margin-top: 10px; display: block; }
@@ -48,12 +49,12 @@
 
             <div class="form-group">
                 <label>Password:</label>
-                <asp:TextBox ID="txtPassword" runat="server" 
+                <asp:TextBox ID="txtPassword" runat="server"
                              TextMode="Password" CssClass="input-field" />
             </div>
 
             <asp:Button ID="btnLogin" runat="server" Text="Login"
-                        CssClass="btn" OnClick="btnLogin_Click" 
+                        CssClass="btn" OnClick="btnLogin_Click"
                         CausesValidation="false" />
 
             <asp:Label ID="lblError" runat="server" CssClass="error-msg" />

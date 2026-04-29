@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Schedules>
+	<Schedule date="01:23:2020">
+		<Practice>
+			<Day>Monday</Day>
+			<StartTime>6:00 AM</StartTime>
+			<EndTime>8:00 AM</EndTime>
+			<Activities>Drills &amp; Endurance</Activities>
+			<Coach>Coach Smith</Coach>
+			<Pool>Pool A</Pool>
+		</Practice>
+	</Schedule>
+	<Schedule date="01:23:2045">
+		<Event type="relay">
+			<EventName>200 Medley Relay</EventName>
+			<Competitor role="Backstroke"></Competitor>
+			<Competitor role="Breaststroke"></Competitor>
+			<Competitor role="Butterfly"></Competitor>
+			<Competitor role="Freestyle"></Competitor>
+			<Backup role="Backstroke"></Backup>
+			<Backup role="Breaststroke"></Backup>
+			<Backup role="Butterfly"></Backup>
+			<Backup role="Freestyle"></Backup>
+		</Event>
+		<Event>
+			<EventName>200 Freestyle</EventName>
+			<Competitor>Xandra</Competitor>
+			<Backup></Backup>
+		</Event>
+		<Event>
+			<EventName>200 Individual Medley</EventName>
+			<Competitor>Vamika</Competitor>
+			<Backup></Backup>
+		</Event>
+		<Event>
+			<EventName>50 Freestyle</EventName>
+			<Competitor></Competitor>
+			<Backup></Backup>
+		</Event>
+		<Event>
+			<EventName>100 Butterfly</EventName>
+			<Competitor></Competitor>
+			<Backup></Backup>
+		</Event>
+		<Event>
+			<EventName>100 Freestyle</EventName>
+			<Competitor></Competitor>
+			<Backup></Backup>
+		</Event>
+		<Event>
+			<EventName>500 Freestyle</EventName>
+			<Competitor></Competitor>
+			<Backup></Backup>
+		</Event>
+		<Event type="relay">
+			<EventName>200 Freestyle Relay</EventName>
+			<Competitor role="Start"></Competitor>
+			<Competitor role="2nd"></Competitor>
+			<Competitor role="3rd"></Competitor>
+			<Competitor role="Finish"></Competitor>
+			<Backup role="Start"></Backup>
+			<Backup role="2nd"></Backup>
+			<Backup role="3rd"></Backup>
+			<Backup role="Finish"></Backup>
+		</Event>
+		<Event>
+			<EventName>100 Backstroke</EventName>
+			<Competitor></Competitor>
+			<Backup></Backup>
+		</Event>
+		<Event>
+			<EventName>100 Breaststrok</EventName>
+			<Competitor></Competitor>
+			<Backup></Backup>
+		</Event>
+		<Event type="relay">
+			<EventName>400 Freestyle Relay</EventName>
+			<Competitor role="Start"></Competitor>
+			<Competitor role="2nd"></Competitor>
+			<Competitor role="3rd"></Competitor>
+			<Competitor role="Finish"></Competitor>
+			<Backup role="Start"></Backup>
+			<Backup role="2nd"></Backup>
+			<Backup role="3rd"></Backup>
+			<Backup role="Finish"></Backup>
+		</Event>
+	</Schedule>
+</Schedules>

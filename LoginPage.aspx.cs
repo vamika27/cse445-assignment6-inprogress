@@ -1,8 +1,5 @@
 ﻿using Assignment6.Models;
 using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -15,16 +12,13 @@ namespace Assignment6
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // If already logged in redirect away from login page
-            if (!IsPostBack && Request.IsAuthenticated)
+            // If already logged in via cookie redirect to home
+            HttpCookie loginCookie = Request.Cookies["SwimClubLogin"];
+            if (!IsPostBack && loginCookie != null &&
+                !string.IsNullOrEmpty(loginCookie["Username"]))
             {
-                string role = Session["UserRole"] as string;
-                if (role == "Staff")
-                    Response.Redirect("StaffPage.aspx");
-                else if (role == "Member")
-                    Response.Redirect("MemberPage.aspx");
-                else
-                    Response.Redirect("Default.aspx");
+                Response.Redirect("Default.aspx");
+                return;
             }
         }
 
@@ -48,10 +42,10 @@ namespace Assignment6
 
             try
             {
-                // Hash password using Brandon's DLL
+                // Hash password using Brandon's CryptoUtil
                 string hashedPassword = CryptoUtil.hashMe(password);
 
-                // DEBUG — shows hash and role being used
+                // DEBUG — remove before final submission
                 lblDebug.Text = string.Format(
                     "DEBUG: Role={0} | Hash={1}...",
                     role, hashedPassword.Substring(0, 15));
@@ -66,19 +60,27 @@ namespace Assignment6
                     Session["UserRole"] = role;
                     Session["Username"] = username;
 
-                    // Set Forms Auth cookie
+                    // Save to persistent cookie (7 days)
+                    HttpCookie loginCookie = new HttpCookie("SwimClubLogin");
+                    loginCookie["Username"] = username;
+                    loginCookie["Role"] = role;
+                    loginCookie.Expires = DateTime.Now.AddDays(7);
+                    Response.Cookies.Add(loginCookie);
+
+                    // Set Forms Auth ticket
                     FormsAuthentication.SetAuthCookie(username, false);
 
-                    // Redirect based on role
-                    if (role == "Staff")
-                        Response.Redirect("StaffPage.aspx", false);
-                    else
-                        Response.Redirect("MemberPage.aspx", false);
+                    // Always redirect to home page after login
+                    Response.Redirect("Default.aspx", true);
                 }
                 else
                 {
                     lblError.Text = "⚠️ Invalid username or password.";
                 }
+            }
+            catch (System.Threading.ThreadAbortException)
+            {
+                // Expected when Response.Redirect called with true — ignore
             }
             catch (Exception ex)
             {
