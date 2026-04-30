@@ -235,9 +235,9 @@
         <hr />
         <div>
             Name:
-            <asp:TextBox ID="txtName" runat="server" TextMode="Password" /><br />
+            <asp:TextBox ID="txtName" runat="server" /><br />
             Password:
-            <asp:TextBox ID="txtPassword" runat="server" /><br />
+            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" /><br />
             <asp:Button ID="btnCreateDefaultAccount" runat="server" CssClass="btn" OnClick="btnCreateDefaultAccount_Click" Text="Create Default Account" />
             <asp:Button ID="btnCreateStaffAccount" runat="server" CssClass="btn" OnClick="btnCreateStaffAccount_Click" Text="Create Staff Account" />
         </div>
