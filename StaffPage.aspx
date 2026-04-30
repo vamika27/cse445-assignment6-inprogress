@@ -240,11 +240,16 @@
             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" /><br />
             <asp:Button ID="btnCreateDefaultAccount" runat="server" CssClass="btn" OnClick="btnCreateDefaultAccount_Click" Text="Create Default Account" />
             <asp:Button ID="btnCreateStaffAccount" runat="server" CssClass="btn" OnClick="btnCreateStaffAccount_Click" Text="Create Staff Account" />
+            
         </div>
         <div>
             Name:
             <asp:TextBox ID="txtRemoveName" runat="server" /><br />
+            New Password:
+            <asp:TextBox ID="txtNewPassword" runat="server" TextMode="Password" /><br />
             <asp:Button ID="btnRemoveMembers" runat="server" CssClass="btn" OnClick="btnRemoveMember_Click" Text="Remove Member" />
+            <asp:Button ID="btnChangePassword" runat="server" CssClass="btn" OnClick="btnChangePassword_Click" Text="Change Password" />
+
         </div>
         <hr />
         <h2>Fundraising:</h2>

@@ -401,7 +401,7 @@ namespace Assignment6
             } else
             {
                 file = Server.MapPath("~/App_Data/Member.xml");
-                typ = "Member";
+                typ = "Members";
             }
             XmlDocument document = new XmlDocument();
             if (File.Exists(file)) // if there is a file already, we can just load it
@@ -448,14 +448,16 @@ namespace Assignment6
 
         public void RemoveMember(string un)
         {
-            string file = Server.MapPath("~/App_Data/Users.xml");
+
+            
+            string file = Server.MapPath("~/App_Data/Member.xml");
             XmlDocument document = new XmlDocument();
             if (!File.Exists(file))
             {
                 return;
             }
             document.Load(file);
-            string nodes = $"/Users/User[Username='{un}']";
+            string nodes = $"/Members/Member[Username='{un}']";
             XmlNode remove = document.SelectSingleNode(nodes);
             // removes that node
 
@@ -464,6 +466,38 @@ namespace Assignment6
                 remove.ParentNode.RemoveChild(remove);
                 document.Save(file);
             }
+
+        }
+
+        protected void btnChangePassword_Click(object sender, EventArgs e) // type in the username and click remove
+        {
+            ChangePassword(txtRemoveName.Text, txtNewPassword.Text);
+            txtRemoveName.Text = "";
+            txtNewPassword.Text = "";
+        }
+
+        public void ChangePassword(string un, string pw)
+        {
+            string file = Server.MapPath("~/App_Data/Member.xml");
+            XmlDocument document = new XmlDocument();
+            if (!File.Exists(file))
+            {
+                return;
+            }
+            document.Load(file);
+            string nodes = $"/Members/Member[Username='{un}']";
+            XmlNode member = document.SelectSingleNode(nodes);
+            // removes that node
+
+            if (member != null)
+            {
+                XmlNode p = member["Password"];
+                if (p != null)
+                {
+                    p.InnerText = CryptoUtil.hashMe(pw);
+                    document.Save(file);
+                }
+            }   
 
         }
 
